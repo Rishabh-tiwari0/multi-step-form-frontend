@@ -14,25 +14,28 @@ const App = () => {
   };
 
   return (
-    <div className="flex h-screen flex-wrap justify-center items-center relative">
-      <div
-        className=" h-1 w-5 absolute top-14 left-16 content-center m-0 font-bold text-3xl -translate-y-1 text-gray-500 cursor-pointer active:scale-95 active:text-gray-950"
-        onClick={() => {
-          if (step === 1) {
-            setStep(1);
-          } else {
-            setStep(step - 1);
-          }
-        }}
-      >
-        ⇠
+    <div className="flex flex-col h-screen w-screen items-center">
+      <div className={`w-8/12 relative sm:w-10/12 `}>
+        <div className="w-full absolute bg-gray-200 h-1 rounded-sm top-4 -z-10"></div>
+        <div
+          className="absolute h-1 bg-green-500 rounded-sm top-4 transition-all ease-in duration-500 "
+          style={{ width: (step / 7) * 100 + "%" }}
+        ></div>
+        <div
+          className="h-1 top-4 absolute font-bold text-3xl text-gray-500 cursor-pointer active:scale-95 active:text-gray-950 -translate-y-5 -translate-x-10 "
+          onClick={() => {
+            if (step === 1) {
+              setStep(1);
+            } else {
+              setStep(step - 1);
+            }
+          }}
+        >
+          ⇠
+        </div>
       </div>
-      <div
-        className="h-1 bg-green-500 absolute top-14 left-28 rounded-sm max-w-screen-xl transition-all ease-in duration-500"
-        style={{ width: (step / 8) * 100 + "%" }}
-      ></div>
-      <div className="w-10/12 h-1 bg-gray-200 absolute top-14 -z-10 left-28 max-w-screen-xl rounded-sm "></div>
-      <div className="flex flex-col items-center">
+
+      <div className="flex flex-col  w-full h-screen justify-center items-center">
         {step === 1 && <CompOne nextStep={nextStep} />}
         {step === 2 && <CompTwo nextStep={nextStep} />}
         {step === 3 && <CompThree nextStep={nextStep} />}

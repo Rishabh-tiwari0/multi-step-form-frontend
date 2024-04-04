@@ -18,7 +18,9 @@ const CompOne = ({ nextStep }) => {
   const [active, setActive] = useState(null);
   return (
     <div className="flex flex-col items-center ">
-      <h1 className="text-3xl font-bold	">Which describes you the best?</h1>
+      <h1 className="text-3xl font-bold	 text-center">
+        Which describes you the best?
+      </h1>
       <h3 className="mt-3 text-gray-500 font-semibold">
         This will help us personalise your experience.
       </h3>

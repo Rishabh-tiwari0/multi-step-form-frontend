@@ -15,17 +15,19 @@ const CompTwo = ({ nextStep }) => {
   ];
   return (
     <div className="flex flex-col items-center ">
-      <h1 className="text-3xl font-bold	">Which are you most intrested in?</h1>
-      <h3 className="mt-3 text-gray-500 font-semibold">
+      <h1 className="text-xl font-bold text-center sm:text-3xl">
+        Which are you most intrested in?
+      </h1>
+      <h3 className="mt-3 text-gray-500 font-semibold text-center text-xs sm:text-base">
         Choose just one. This will help us get you started (but won't limit your
         experience).
       </h3>
-      <div className="mt-4 flex-col gap-2 flex">
+      <div className="mt-4 flex-col gap-2 flex items-center w-9/12">
         {reasonsOfvisit.map((reason, index) => {
           return (
             <div
               key={index}
-              className={`flex gap-8 transition-all p-3  items-center border-2 rounded-md   max-w-full w-auto cursor-pointer hover:scale-105 ${
+              className={`w-full flex gap-8 transition-all p-3 items-center border-2 rounded-md cursor-pointer hover:scale-105 sm:max-w-full ${
                 active === index ? `border-amber-400  ` : ""
               }`}
               onClick={() => {
@@ -33,7 +35,9 @@ const CompTwo = ({ nextStep }) => {
               }}
             >
               <span>{reason.emoticon}</span>
-              <h3 className={`font-semibold text-gray-600 `}>
+              <h3
+                className={`font-semibold text-gray-600 text-xs sm:text-base`}
+              >
                 {reason.reason}
               </h3>
             </div>

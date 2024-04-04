@@ -14,13 +14,15 @@ const CompFour = ({ nextStep }) => {
   ];
 
   return (
-    <div className="flex flex-col items-center ">
-      <h1 className="text-3xl font-bold	">What is your math comfort level?</h1>
-      <h3 className="mt-3 text-gray-500 font-semibold">
+    <div className="flex flex-col items-center overflow-auto mt-14 mb-20">
+      <h1 className="text-xl font-bold	text-center sm:text-3xl">
+        What is your math comfort level?
+      </h1>
+      <h3 className="mt-3 text-gray-500 font-semibold text-xs text-center sm:text-base">
         Choose the highest level you feel confident in — you can always adjust
         later.
       </h3>
-      <div className="flex mt-10 gap-8">
+      <div className="flex flex-col mt-10 gap-1 sm:flex-row sm:flex-wrap sm:gap-8">
         {dataArray.map((lvl, index) => {
           return (
             <div

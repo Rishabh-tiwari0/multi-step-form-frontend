@@ -40,15 +40,15 @@ const Compsix = ({ nextStep }) => {
         </>
       ) : (
         <section className="flex flex-col items-center">
-          <div className="flex flex-col items-center ">
-            <h1 className="text-3xl font-bold	">
+          <div className="flex flex-col items-center w-11/12 overflow-auto">
+            <h1 className="text-lg font-bold	text-center sm:text-3xl">
               Learning paths based on your answers
             </h1>
-            <h3 className="mt-3 text-gray-500 font-semibold">
+            <h3 className="mt-3 text-gray-500 font-semibold text-xs sm:text-base">
               Choose one to get started. You can Switch anytime.
             </h3>
           </div>
-          <div className="w-screen flex gap-7 justify-center mt-10">
+          <div className="w-11/12 flex flex-col flex-wrap gap-7 justify-center mt-10 sm:flex-row sm:w-screen">
             {math_courses.map((course, index) => {
               return (
                 <div
