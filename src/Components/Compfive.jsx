@@ -14,7 +14,9 @@ const Compfive = ({ nextStep }) => {
             <h1 className="text-3xl font-bold	text-center sm:text-start">
               You’re on your way!
             </h1>
-            <div className="text-amber-400 text-4xl text-center">★★★★★</div>
+            <div className="text-amber-400 text-4xl text-center sm:text-start">
+              ★★★★★
+            </div>
             <p className="text-center italic mt-3 sm:text-start">
               “Well-organized, well-explained, well-designed. Brilliant is
               absolutely a good choice if you want to learn or re-learn anything
